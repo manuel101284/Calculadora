@@ -7,51 +7,56 @@
     <title>calculadorabasica</title>
 
     <link href="style.css" rel="stylesheet"/>
+
     <script href="calculus.js"></script>
+        
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
     
 </head>
-<body>
+<body onload="init();">
     <section class="container">
         <section class="modo_dia_noche">
-            <button type="button" class="boton-dia-noche" onclick="cambiarModo()">ON/OFF</button>
+            <button class="boton-dia-noche" onclick="cambiarModo()"><img src="/img/sun-and-moon.svg"/></button>
         </section>
         
-        <section class="tabla-1" id="tabla-1">
-            <section class="pantalla texto_resultado-0">
-                <p class="texto_resultado-1">resultado<p>
-            </section>
+        <section class="calculadora" id="calculadora-1">
+            <!-- <div class="pantalla texto_resultado-0">
+                <span class="texto_resultado-1" id="resultado"></span>
+            </div> -->
+
+            <span class="pantalla texto_resultado-0 texto_resultado-1" id="resultado">0</span>
+
             <!-- <section class="fila-1"> -->
-                <section><button class="boton" id="boton_ac">AC</button></section>
-                <section><button class="boton" id="boton_borrar">DEL</button></section>
-                <section><button class="boton" id="boton_potencia">^</button></section>
-                <section><button class="boton" id="boton_division">/</button></section>
+                <div><button class="boton" id="boton_ac">AC</button></div>
+                <div><button class="boton" id="boton_borrar">DEL</button></div>
+                <div><button class="boton" id="boton_potencia">**</button></div>
+                <div><button class="boton" id="boton_division">/</button></div>
             <!-- </section> -->
             <!-- <section class="fila-2"> -->
-                <section><button class="boton" id="boton_7">7</button></section>
-                <section><button class="boton" id="boton_8">8</button></section>
-                <section><button class="boton" id="boton_9">9</button></section>
-                <section><button class="boton" id="boton_multiplicacion">*</button></section>
+                <div><button class="boton" id="boton_7">7</button></div>
+                <div><button class="boton" id="boton_8">8</button></div>
+                <div><button class="boton" id="boton_9">9</button></div>
+                <div><button class="boton" id="boton_multiplicacion">*</button></div>
             <!-- </section> -->
             <!-- <section class="fila-3"> -->
-                <section><button class="boton" id="boton_4">4</button></section>
-                <section><button class="boton" id="boton_5">5</button></section>
-                <section><button class="boton" id="boton_6">6</button></section>
-                <section><button class="boton" id="boton_resta">-</button></section>
+                <div><button class="boton" id="boton_4">4</button></div>
+                <div><button class="boton" id="boton_5">5</button></div>
+                <div><button class="boton" id="boton_6">6</button></div>
+                <div><button class="boton" id="boton_resta">-</button></div>
             <!-- </section> -->
             <!-- <section class="fila-4"> -->
-                <section><button class="boton" id="boton_1">1</button></section>
-                <section><button class="boton" id="boton_2">2</button></section>
-                <section><button class="boton" id="boton_3">3</button></section>
-                <section><button class="boton" id="boton_suma">+</button></section>
+                <div><button class="boton" id="boton_1">1</button></div>
+                <div><button class="boton" id="boton_2">2</button></div>
+                <div><button class="boton" id="boton_3">3</button></div>
+                <div><button class="boton" id="boton_suma">+</button></div>
             <!-- </section> -->
             <!-- <section class="fila-5"> -->
-                <section><button class="boton" id="boton_punto">.</button></section>
-                <section><button class="boton" id="boton_0">0</button></section>
-                <section><button class="boton" id="boton_porcentaje">%</button></section>
-                <section><button class="boton" id="boton_resultado">=</button></section>
+                <div><button class="boton" id="boton_punto">.</button></div>
+                <div><button class="boton" id="boton_0">0</button></div>
+                <div><button class="boton" id="boton_porcentaje">%</button></div>
+                <div><button class="boton" id="boton_igual">=</button></div>
             <!-- </section> -->
         </section>
     </section>
@@ -62,5 +67,7 @@
             bodyWeb.classList.toggle("oscuro");
         }
     </script>
+
+    <script src="calculus.js"></script>
 </body>
 </html>
