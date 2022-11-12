@@ -132,7 +132,9 @@ function init(){
         operandob = resultado.textContent;
         resolver();
     }
-
+    borrar.onclick = function(e){
+        resultado.textContent = resultado.textContent.slice(0,-1);
+    }
     function limpiar(){
         resultado.textContent = "";
     }
@@ -171,4 +173,3 @@ function init(){
         console.log(res);
     }
 }
-
